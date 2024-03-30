@@ -43,7 +43,7 @@ body {
 
 .navbar {
   background-color: #2196f3;
-  background-image: url("public/poke-logo3.png"); 
+  background-image: url("public/pkmn-logo.png"); 
   background-repeat: no-repeat;
   background-position: center top 5px;
   background-size:  100px 100px;;
@@ -158,4 +158,47 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   height: 3rem;
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #1565c0; 
+  border-radius: 20px; 
+  margin-left: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  background-color: #f8f9fa;
+  color: #333; 
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #999; 
+}
+
+.search-input:focus {
+  border-color: #0056b3;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  margin-left: 200px;
+}
+
+.filter-container button {
+  margin: 5px;
+  padding: 8px 16px; 
+  border: 2px solid #1565c0; 
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+.filter-container button:focus {
+  background-color: #1565c0; 
+  color: white;
 }

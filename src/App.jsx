@@ -5,13 +5,11 @@ import PokemonData from './components/PokemonData';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div className="whole-page">
         <NavbarComponent />
-
         <div className="card-container">
           <TotalPokemonCard />
           <FireTypePokemonCard />

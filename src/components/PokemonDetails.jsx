@@ -40,7 +40,10 @@ function PokemonDetails({pkmnName, pkmnURL}) {
     const backgroundColor = pkmnDetails.types[0].type.name in typeColors
         ? typeColors[pkmnDetails.types[0].type.name]
         : "#FFFFFF";
-    const types = pkmnDetails.types.map((type, index) => (
+    
+    const types = 
+        pkmnDetails.types &&
+        pkmnDetails.types.map((type, index) => (
         <div key={index}>{type.type.name}</div>
     ));
 
