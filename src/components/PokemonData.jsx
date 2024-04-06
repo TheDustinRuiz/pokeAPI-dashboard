@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import PokemonDetails from './PokemonDetails';
+import PokemonInfo from './PokemonInfo';
 
 function PokemonData() {
     const [pkmnData, setPkmnData] = useState([]);
@@ -77,7 +77,7 @@ function PokemonData() {
             <div className="pokemon-list">
                 {pkmnData.results && searchFilteredPkmn.map((pokemon, index) => (
                     <div key={index}>
-                        <PokemonDetails pkmnName={pokemon.name} pkmnURL={pokemon.url}/>
+                        <PokemonInfo pkmnName={pokemon.name} pkmnURL={pokemon.url}/>
                     </div>
                 ))}
                 

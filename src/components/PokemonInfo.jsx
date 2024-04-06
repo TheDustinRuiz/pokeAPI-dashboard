@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-function PokemonDetails({pkmnName, pkmnURL}) {
+function PokemonInfo({pkmnName, pkmnURL}) {
     const [pkmnDetails, setPkmnDetails] = useState(null);
 
     useEffect(() => {
@@ -49,11 +50,11 @@ function PokemonDetails({pkmnName, pkmnURL}) {
 
     return (
         <div className="pokemon-details" style={{ backgroundColor }}>
-            <div className="pokemon-name">{pkmnName} #{pkmnDetails.id}</div>
-            <img className="pokemon-image" src={pkmnDetails.sprites.front_default} alt='pokemon' />
+            <Link to={`/pokemonDetails/${pkmnName}`} className="pokemon-name">{pkmnName} #{pkmnDetails.id}</Link>
+            <img className="pokemon-image" src={pkmnDetails.sprites.front_default} alt='pokemon image' />
             <div className="pokemon-types">{types}</div>
         </div>
     );
 }
 
-export default PokemonDetails;
+export default PokemonInfo;
